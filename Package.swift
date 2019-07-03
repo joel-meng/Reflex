@@ -11,6 +11,9 @@ let package = Package(
             name: "Reflex",
             targets: ["Reflex"]),
     ],
+    platforms: [
+        .iOS(.v8)
+    ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
