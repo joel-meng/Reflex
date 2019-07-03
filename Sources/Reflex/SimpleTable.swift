@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public func simpleDataUpdater<T>(for tableView: UITableView,
-                          configCell: @escaping (UITableViewCell) -> Void) -> (_ items: [T]) -> Void {
+                          configCell: @escaping (T, UITableViewCell) -> Void) -> (_ items: [T]) -> Void {
     let dataSource = SimpleDataSource<T>()
     registerCell(on: tableView, for: T.self)
     tableView.dataSource = dataSource
@@ -19,7 +19,7 @@ public func simpleDataUpdater<T>(for tableView: UITableView,
         dataSource.rowCount = { _ in items.count }
         dataSource.cell = { indexPath, tableView in
             let cell = tableView.dequeueReusableCell(withIdentifier: typeString(T.self), for: indexPath)
-            configCell(cell)
+            configCell(items[indexPath.row], cell)
             return cell
         }
     }
