@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "DeepDiff",
+        "repositoryURL": "https://github.com/onmyway133/DeepDiff.git",
+        "state": {
+          "branch": null,
+          "revision": "9d5c67c58b9f06c0c638bd98ee4093abbe4a08a1",
+          "version": "2.3.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
